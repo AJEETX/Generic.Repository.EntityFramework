@@ -52,9 +52,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
-    <Compile Include="UnitTestIDbContext.cs" />
+    <Compile Include="RepositoryTests.cs" />
+    <Compile Include="DBManagerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntityFrameworkWrapper\EntityFrameworkWrapper.csproj">
+      <Project>{F2D7DE6A-A003-43E5-A1E3-45555A124F05}</Project>
+      <Name>EntityFrameworkWrapper</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
