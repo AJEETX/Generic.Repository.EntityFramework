@@ -14,10 +14,10 @@ namespace EntityFrameworkWrapper.Test
             var transationManager = new DBManager(_IMockIDbcontext.Object);
 
             //Act
-            var result = transationManager.CreateRepository<ClientData>();
+            var result = transationManager.CreateRepository<InputModel>();
 
             //Assert
-            Assert.IsInstanceOfType(result, typeof(IRepository<ClientData>));
+            Assert.IsInstanceOfType(result, typeof(IRepository<InputModel>));
             Assert.IsNotNull(result);
         }
         [TestMethod]
