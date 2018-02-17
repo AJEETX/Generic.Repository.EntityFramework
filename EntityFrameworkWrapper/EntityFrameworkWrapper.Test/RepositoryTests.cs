@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EntityFrameworkWrapper.Tests
 {
-public class Input{public int Id {get;set;} public string Name{get;set;}}
+public class InputModel{public int Id {get;set;} public string Name{get;set;}}
 [TestClass]
     public class RepositoryTest
     {
@@ -19,7 +19,7 @@ public class Input{public int Id {get;set;} public string Name{get;set;}}
         public void Init()
         {
             _IMockCtx = new Mock<IDbContext>();
-            model =new List<Input>{ new Input {
+            model =new List<InputModel>{ new InputModel {
                 Name = "Test Name",
                 Id = 999}
                 };
@@ -56,39 +56,39 @@ public class Input{public int Id {get;set;} public string Name{get;set;}}
         public void Get_client_data_from_datastore()
         {
             //Arrange
-            var repository = new Repository<Input>(_IMockCtx.Object);
+            var repository = new Repository<InputModel>(_IMockCtx.Object);
 
             //Act
             var result = repository.Get();
 
             //Assert
-            Assert.IsInstanceOfType(result, typeof(IQueryable<Input>));
-            _IMockCtx.Verify(v => v.Set<Input>(), Times.Once);
+            Assert.IsInstanceOfType(result, typeof(IQueryable<InputModel>));
+            _IMockCtx.Verify(v => v.Set<InputModel>(), Times.Once);
         }
 
         [TestMethod]
         public void Add_client_data_to_datastore_successful()
         {
             //Arrange
-            var repository = new Repository<Input>(_IMockCtx.Object);
+            var repository = new Repository<InputModel>(_IMockCtx.Object);
             var data = model.FirstOrDefault();
             //Act
             repository.Add(data);
 
             //Assert
-            _IMockCtx.Verify(v => v.Set<Input>().Add(It.IsAny<Input>()), Times.Once);
+            _IMockCtx.Verify(v => v.Set<InputModel>().Add(It.IsAny<InputModel>()), Times.Once);
         }
 
         [TestMethod]
         public void Delete_client_data_from_datastore_successful()
         {
             //Arrange
-            var repository = new Repository<Input>(_IMockCtx.Object);
+            var repository = new Repository<InputModel>(_IMockCtx.Object);
 
             //Act
             repository.Delete(model.FirstOrDefault());
 
             //Assert
-            _IMockCtx.Verify(v => v.Set<Input>().Remove(It.IsAny<Input>()), Times.Once);
+            _IMockCtx.Verify(v => v.Set<InputModel>().Remove(It.IsAny<InputModel>()), Times.Once);
         }
     }}
