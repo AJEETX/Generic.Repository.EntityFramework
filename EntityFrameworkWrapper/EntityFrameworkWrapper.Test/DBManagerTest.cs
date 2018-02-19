@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Threading.Tasks;
+using EntityFrameworkWrapper.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 
 namespace EntityFrameworkWrapper.Test
 {
@@ -10,11 +13,11 @@ namespace EntityFrameworkWrapper.Test
         public void TestMethod_GetRepository_returns_the_type_requested_repository()
         {
             //Arrange
-            _IMockIDbcontext = new Mock<IDbContext>();
+            var _IMockIDbcontext = new Mock<IDbContext>();
             var transationManager = new DBManager(_IMockIDbcontext.Object);
 
             //Act
-            var result = transationManager.CreateRepository<InputModel>();
+            var result = transationManager.GetRepository<InputModel>();
 
             //Assert
             Assert.IsInstanceOfType(result, typeof(IRepository<InputModel>));
@@ -24,18 +27,18 @@ namespace EntityFrameworkWrapper.Test
         public void TestMethod_Save_returns_point_integer_on_succesfull_operation()
         {
             //Arrange
-            _IMockIDbcontext = new Mock<IDbContext>();
-            _IMockIDbcontext.Setup(m => m.SaveChange()).Returns(1);
+            var _IMockIDbcontext = new Mock<IDbContext>();
+            _IMockIDbcontext.Setup(m => m.SaveAsync()).ReturnsAsync(1);
             var transationManager = new DBManager(_IMockIDbcontext.Object);
 
             //Act
-            var result = transationManager.Save();
+            var result = transationManager.SaveAsync();
 
             //Assert
-            Assert.IsInstanceOfType(result, typeof(int));
+            Assert.IsInstanceOfType(result, typeof(Task<int>));
             Assert.IsNotNull(result);
             Assert.AreEqual(result, 1);
-            _IMockIDbcontext.Verify(v => v.SaveChange(), Times.Once);
+            _IMockIDbcontext.Verify(v => v.SaveAsync(), Times.Once);
         
         }
     }

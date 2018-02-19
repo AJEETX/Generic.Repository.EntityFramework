@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Moq;
+using System.Data.Entity;
 
 namespace EntityFrameworkWrapper.Tests
 {
@@ -14,7 +16,7 @@ public class InputModel{public int Id {get;set;} public string Name{get;set;}}
     {
         private Mock<IDbContext> _IMockCtx;
 
-        private IEnumerable<ClientData> model;
+        private IEnumerable<InputModel> model;
         [TestInitialize]
         public void Init()
         {
@@ -31,13 +33,9 @@ public class InputModel{public int Id {get;set;} public string Name{get;set;}}
             _IMockCtx.Setup(m => m.Set<T>()).Returns(dbset);
             _IMockCtx.Setup(m => m.Set<T>().Add(It.IsAny<T>())).Verifiable();
             _IMockCtx.Setup(m => m.Set<T>().Remove(It.IsAny<T>())).Verifiable();
-            _IMockCtx.Setup(m => m.SaveChange()).Returns(1);
-            _IMockCtx.Setup(m => m.SetEntityStateModified<T>(data.FirstOrDefault()));
+            _IMockCtx.Setup(m => m.SaveAsync()).ReturnsAsync(1);
         }
-        private void StateChange<T>(T data) where T : class
-        {
-            _IMockCtx.Object.SetEntityStateModified<T>(data);
-        }
+
         private static IDbSet<T> GetIDbset<T>(IEnumerable<T> sourceList) where T : class
         {
             var queryable = sourceList.AsQueryable();
@@ -62,7 +60,7 @@ public class InputModel{public int Id {get;set;} public string Name{get;set;}}
             var result = repository.Get();
 
             //Assert
-            Assert.IsInstanceOfType(result, typeof(IQueryable<InputModel>));
+            Assert.IsInstanceOfType(result, typeof(Task<IEnumerable<InputModel>>));
             _IMockCtx.Verify(v => v.Set<InputModel>(), Times.Once);
         }
 
@@ -86,7 +84,7 @@ public class InputModel{public int Id {get;set;} public string Name{get;set;}}
             var repository = new Repository<InputModel>(_IMockCtx.Object);
 
             //Act
-            repository.Delete(model.FirstOrDefault());
+            repository.Remove(1);
 
             //Assert
             _IMockCtx.Verify(v => v.Set<InputModel>().Remove(It.IsAny<InputModel>()), Times.Once);

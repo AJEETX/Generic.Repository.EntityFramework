@@ -11,17 +11,17 @@ namespace EntityFrameworkWrapper
     {
         Task<IEnumerable<T>> Get();
         Task<T> Find(Expression<Func<T, bool>> predicate);
-        Task Add(T entity);
-        Task Remove(int id);
+        Task<T> Add(T entity);
+        Task<T> Remove(int id);
     }
-    public class Repository<T> : IRepository<T> where T : class
+    class Repository<T> : IRepository<T> where T : class
     {
         readonly IDbContext _dbContext;
         public Repository(IDbContext dbContext)
         {
             _dbContext = dbContext;
         }
-        public Task Add(T entity)
+        public Task<T> Add(T entity)
         {
             return Task.FromResult(_dbContext.Set<T>().Add(entity));
         }
@@ -36,7 +36,7 @@ namespace EntityFrameworkWrapper
             return Task.FromResult(_dbContext.Set<T>().AsEnumerable());
         }
 
-        public Task Remove(int id)
+        public Task<T> Remove(int id)
         {
             var entity = _dbContext.Set<T>().Find(id);
             return Task.FromResult(_dbContext.Set<T>().Remove(entity));
