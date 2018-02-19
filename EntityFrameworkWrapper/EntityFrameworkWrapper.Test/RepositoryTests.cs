@@ -71,9 +71,10 @@ public class InputModel{public int Id {get;set;} public string Name{get;set;}}
             var repository = new Repository<InputModel>(_IMockCtx.Object);
             var data = model.FirstOrDefault();
             //Act
-            repository.Add(data);
+            var result=repository.Add(data);
 
             //Assert
+            Assert.IsInstanceOfType(result, typeof(Task<InputModel>));
             _IMockCtx.Verify(v => v.Set<InputModel>().Add(It.IsAny<InputModel>()), Times.Once);
         }
 
