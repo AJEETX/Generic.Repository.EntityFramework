@@ -37,7 +37,7 @@ namespace EntityFrameworkWrapper.Test
             //Assert
             Assert.IsInstanceOfType(result, typeof(Task<int>));
             Assert.IsNotNull(result);
-            Assert.AreEqual(result, 1);
+            Assert.AreEqual(result.Result, 1);
             _IMockIDbcontext.Verify(v => v.SaveAsync(), Times.Once);
         
         }
