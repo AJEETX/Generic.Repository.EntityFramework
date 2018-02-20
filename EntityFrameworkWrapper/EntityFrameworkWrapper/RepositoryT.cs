@@ -23,16 +23,8 @@ namespace EntityFrameworkWrapper
         }
         public virtual void Add(T entity)
         {
-            try
-            {
                 _context.Set<T>().Add(entity);
                 _context.Save();
-            }
-            catch (Exception e)
-            {
-
-                throw;
-            }
         }
 
         public virtual void Delete(T entity)
@@ -40,7 +32,7 @@ namespace EntityFrameworkWrapper
             _context.Set<T>().Remove(entity);
             _context.Save();
         }
-        public T Find(Expression<Func<T, bool>> predicate)
+        public virtual T Find(Expression<Func<T, bool>> predicate)
         {
             return _context.Set<T>().Find(predicate);
         }
