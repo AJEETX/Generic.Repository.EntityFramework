@@ -9,12 +9,12 @@ namespace EntityFrameworkWrapper
 {
     public class UnityConfig
     {
-        public static IDBManager GetDBManager()
+        public static IUnityContainer UnityContainer;
+        static UnityConfig()
         {
-            IUnityContainer unitycontainer = new UnityContainer();
-            unitycontainer.RegisterType<IDBManager, DBManager>();
-            unitycontainer.RegisterType(typeof(IRepository<>),typeof(Repository<>));
-            return unitycontainer.Resolve<IDBManager>();
+            UnityContainer = new UnityContainer();
+            UnityContainer.RegisterType<IDBManager, DBManager>();
+            UnityContainer.RegisterType(typeof(IRepository<>), typeof(Repository<>));
         }
     }
 }

@@ -57,7 +57,7 @@ public class InputModel{public int Id {get;set;} public string Name{get;set;}}
             var repository = new Repository<InputModel>(_IMockCtx.Object);
 
             //Act
-            var result = repository.Get();
+            var result = repository.GetAsync();
 
             //Assert
             Assert.IsInstanceOfType(result, typeof(Task<IEnumerable<InputModel>>));

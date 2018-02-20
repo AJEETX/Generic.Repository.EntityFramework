@@ -9,7 +9,7 @@ namespace EntityFrameworkWrapper
 {
     public interface IRepository<T> where T : class
     {
-        Task<IEnumerable<T>> Get();
+        Task<IEnumerable<T>> GetAsync();
         Task<T> Find(Expression<Func<T, bool>> predicate);
         Task<T> Add(T entity);
         Task<T> Remove(int id);
@@ -31,7 +31,7 @@ namespace EntityFrameworkWrapper
             return Task.FromResult(_dbContext.Set<T>().Find(predicate));
         }
 
-        public Task<IEnumerable<T>> Get()
+        public Task<IEnumerable<T>> GetAsync()
         {
             return Task.FromResult(_dbContext.Set<T>().AsEnumerable());
         }
