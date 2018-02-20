@@ -41,10 +41,5 @@ namespace EntityFrameworkWrapper.Test
             _IMockIDbcontext.Verify(v => v.SaveAsync(), Times.Once);
 
         }
-        [TestMethod]
-        public void IntegrationTest()
-        {
-
-        }
     }
 }
