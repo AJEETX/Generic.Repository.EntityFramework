@@ -39,7 +39,12 @@ namespace EntityFrameworkWrapper.Test
             Assert.IsNotNull(result);
             Assert.AreEqual(result.Result, 1);
             _IMockIDbcontext.Verify(v => v.SaveAsync(), Times.Once);
-        
+
+        }
+        [TestMethod]
+        public void IntegrationTest()
+        {
+
         }
     }
 }
