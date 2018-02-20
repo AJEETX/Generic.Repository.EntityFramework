@@ -10,7 +10,6 @@ namespace EntityFrameworkWrapper
     public interface IDBManager
     {
         IRepository<T> GetRepository<T>() where T : class;
-        int Save();
     }
     class DBManager : IDBManager
     {
@@ -24,18 +23,12 @@ namespace EntityFrameworkWrapper
         {
             if (_repositories == null) _repositories = new Hashtable();
             var type = typeof(T).Name;
-            if (!_repositories.ContainsKey(type))
-            {
+            if (!_repositories.ContainsKey(type)) {
                 var repoType = typeof(Repository<>);
                 var repoInstance = Activator.CreateInstance(repoType.MakeGenericType(typeof(T)), _dbContext);
                 _repositories.Add(type, repoInstance);
             }
             return (IRepository<T>)_repositories[type];
-        }
-
-        public virtual int Save()
-        {
-            return _dbContext.Save();
         }
     }
 }

@@ -10,7 +10,7 @@ namespace EntityFrameworkWrapper
     public interface IRepository<T> where T : class
     {
         IEnumerable<T> Get();
-        T Find(Expression<Func<T, bool>> predicate);
+        T Find(int id);
         void Add(T entity);
         void Delete(T entity);
     }
@@ -32,9 +32,9 @@ namespace EntityFrameworkWrapper
             _context.Set<T>().Remove(entity);
             _context.Save();
         }
-        public virtual T Find(Expression<Func<T, bool>> predicate)
+        public virtual T Find(int id)
         {
-            return _context.Set<T>().Find(predicate);
+            return _context.Set<T>().Find(id);
         }
         public virtual IEnumerable<T> Get()
         {
