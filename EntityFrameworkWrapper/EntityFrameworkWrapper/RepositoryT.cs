@@ -9,37 +9,44 @@ namespace EntityFrameworkWrapper
 {
     public interface IRepository<T> where T : class
     {
-        Task<IEnumerable<T>> GetAsync();
-        Task<T> Find(Expression<Func<T, bool>> predicate);
-        Task<T> Add(T entity);
-        Task<T> Remove(int id);
+        IEnumerable<T> Get();
+        T Find(Expression<Func<T, bool>> predicate);
+        void Add(T entity);
+        void Delete(T entity);
     }
-    class Repository<T> : IRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class
     {
-        readonly IDbContext _dbContext;
-        public Repository(IDbContext dbContext)
+        private readonly IDbContext _context;
+        public Repository(IDbContext context)
         {
-            _dbContext = dbContext;
+            _context = context;
         }
-        public Task<T> Add(T entity)
+        public virtual void Add(T entity)
         {
-            return Task.FromResult(_dbContext.Set<T>().Add(entity));
+            try
+            {
+                _context.Set<T>().Add(entity);
+                _context.Save();
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
         }
 
-        public Task<T> Find(Expression<Func<T, bool>> predicate)
+        public virtual void Delete(T entity)
         {
-            return Task.FromResult(_dbContext.Set<T>().Find(predicate));
+            _context.Set<T>().Remove(entity);
+            _context.Save();
         }
-
-        public Task<IEnumerable<T>> GetAsync()
+        public T Find(Expression<Func<T, bool>> predicate)
         {
-            return Task.FromResult(_dbContext.Set<T>().AsEnumerable());
+            return _context.Set<T>().Find(predicate);
         }
-
-        public Task<T> Remove(int id)
+        public virtual IEnumerable<T> Get()
         {
-            var entity = _dbContext.Set<T>().Find(id);
-            return Task.FromResult(_dbContext.Set<T>().Remove(entity));
+            return _context.Set<T>();
         }
     }
 }

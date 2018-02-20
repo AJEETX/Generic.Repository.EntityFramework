@@ -10,6 +10,6 @@ namespace EntityFrameworkWrapper
     public interface IDbContext
     {
         IDbSet<T> Set<T>() where T : class;
-        Task<int> SaveAsync();
+        int Save();
     }
 }

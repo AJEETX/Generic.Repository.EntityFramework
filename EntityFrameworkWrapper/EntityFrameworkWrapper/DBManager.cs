@@ -10,7 +10,7 @@ namespace EntityFrameworkWrapper
     public interface IDBManager
     {
         IRepository<T> GetRepository<T>() where T : class;
-        Task<int> SaveAsync();
+        int Save();
     }
     class DBManager : IDBManager
     {
@@ -33,9 +33,9 @@ namespace EntityFrameworkWrapper
             return (IRepository<T>)_repositories[type];
         }
 
-        public Task<int> SaveAsync()
+        public virtual int Save()
         {
-            return _dbContext.SaveAsync();
+            return _dbContext.Save();
         }
     }
 }
