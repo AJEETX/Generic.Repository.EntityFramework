@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace EntityFrameworkWrapper
 {
@@ -23,14 +18,11 @@ namespace EntityFrameworkWrapper
         }
         public virtual void Add(T entity)
         {
-                _context.Set<T>().Add(entity);
-                _context.Save();
+                _context.Set<T>().Add(entity); _context.Save();
         }
-
         public virtual void Delete(T entity)
         {
-            _context.Set<T>().Remove(entity);
-            _context.Save();
+            _context.Set<T>().Remove(entity); _context.Save();
         }
         public virtual T Find(int id)
         {
