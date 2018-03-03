@@ -1,23 +1,20 @@
 # EntityFrameworkWrapper [![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981)
 
-
 > [![Release](https://img.shields.io/badge/release-v1.0.7-blue.svg?style=plastic)](https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7)
 
 > [![Build Status](https://travis-ci.org/AJEETX/EntityFrameworkWrapper.png?branch=master&style=plastic)](https://travis-ci.org/AJEETX/EntityFrameworkWrapper)
 
 > [![dependencies Status](https://img.shields.io/badge/dependency-none-brightgreen.svg?style=plastic)](https://img.shields.io/badge/dependency-none-brightgreen.svg)
 
-### Steps to start working with your sql server database from .net application:
+### Steps to connect .net application with Sql server database:
 >   Through Visual Studio IDE, 
 >	1.  Download the latest nuget package of 'EntityFrameworkWrapper' from http://nuget.org
 >	2. Create your EntityFramework DataModel, then tweak the DataModel as below
 ```
-
 using EntityFrameworkWrapper;       //add this reference
-//DB is real data model created from database
-//IDbContext is inherited from this nuget package
-public partial class DB : DbContext, IDbContext   
-    {
+
+public partial class DB : DbContext, IDbContext   //DB is real data model created from database
+    { //IDbContext is inherited from this nuget package
         public DB() : base("name=connectionstring"){} 
         IDbSet<T> IDbContext.Set<T>()
         {
@@ -34,29 +31,26 @@ public partial class DB : DbContext, IDbContext
 >   3.	Now all set, please add the below lines from your consuming object/component
 
 ```
-using EntityFrameworkWrapper; //add this reference
-using Unity;  //add this reference
+using EntityFrameworkWrapper;using Unity;  //add these 2 references
 public class ConsumeService
 {
-    ...
      ...
     void ConsumeMethod()
      {
      var unitycontainer = UnityConfig.UnityContainer;//get the Unity container
      unitycontainer.RegisterType<IDbContext, DataModel>(); // register you 'DataModel'
      var dbManager=unitycontainer.Resolve<IDBManager>(); //get the db manager
-	
 	//DO YOUR CRUD OPERATION //Customer is the table name in DB; 
-       //get all the result	
+       //GET	
         var result=dbManager.GetRepository<Customer>().Get();  
        
-       //Find by id, is the primary key
+       //FIND by id, where id is the primary key
 	var result=dbManager.GetRepository<Customer>().Find(id); 
 
-       // Add, custObj is the Customer object
+       // ADD, custObj is the Customer object
 	var result=dbManager.GetRepository<Customer>().Add(custObj);
 
-       // Delete, custObj is the Customer object
+       // DELETE, custObj is the Customer object
 	var result=dbManager.GetRepository<Customer>().Delete(custObj);
      }
 ```
