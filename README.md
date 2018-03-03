@@ -2,6 +2,8 @@
 
 > [![Release](https://img.shields.io/badge/release-v1.0.7-blue.svg)](https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7)
 
+>[![Downloads](https://img.shields.io/badge/downloads-1K-blue.svg)](https://www.nuget.org/stats/packages/Generic.Repository.EntityFramework?groupby=Version)
+
 > [![Build Status](https://travis-ci.org/AJEETX/EntityFrameworkWrapper.png?branch=master)](https://travis-ci.org/AJEETX/EntityFrameworkWrapper)
 
 > [![dependencies Status](https://img.shields.io/badge/dependency-none-brightgreen.svg)](https://img.shields.io/badge/dependency-none-brightgreen.svg)
