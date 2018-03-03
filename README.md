@@ -55,11 +55,9 @@ public class ConsumeService
      }
 ```
 
-## Happy Coding
-
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://github.com/AJEETX/EntityFrameworkWrapper/blob/master/README.md) or [contact support](mailto:ajeetkumar@email.com) and we’ll help you sort it out.
+Having any trouble? Check out our [documentation](https://github.com/AJEETX/EntityFrameworkWrapper/blob/master/README.md) or [contact support](mailto:ajeetkumar@email.com) and we’ll help you sort it out.
 
 >[![Downloads](https://img.shields.io/badge/downloads-1K-blue.svg?style=plastic)](https://www.nuget.org/stats/packages/Generic.Repository.EntityFramework?groupby=Version)
 
