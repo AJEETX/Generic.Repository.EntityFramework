@@ -65,3 +65,4 @@ Having any trouble? Check out our [documentation](https://github.com/AJEETX/Enti
 
 > [![HitCount](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1.svg)](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1)
 
+> ![Github All Releases](https://img.shields.io/github/downloads/ajeetx/entityframeworkwrapper/total.svg)
