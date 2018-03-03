@@ -7,9 +7,9 @@
 > [![dependencies Status](https://img.shields.io/badge/dependency-none-brightgreen.svg?style=plastic)](https://img.shields.io/badge/dependency-none-brightgreen.svg)
 
 ### Steps to connect .net application with Sql server database:
->   Through Visual Studio IDE, 
->   ![EntityFrameworkWrapper] (https://img.shields.io/badge/EntityFramework-Wrapper-blue.svg)] (https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7) Download the latest nuget package
-```
+
+>    (https://img.shields.io/badge/EntityFramework-Wrapper-blue.svg)] (https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7) Download the latest nuget package through Visual Studio IDE, 
+
 >   2. Create your EntityFramework DataModel, then tweak the DataModel as below
 ```
 using EntityFrameworkWrapper;       //add this reference
