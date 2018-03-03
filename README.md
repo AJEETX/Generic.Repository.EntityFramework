@@ -1,4 +1,5 @@
-# EntityFrameworkWrapper [![Release](https://img.shields.io/badge/release-v1.0.7-blue.svg?style=for-the-badge)](https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7)
+# EntityFrameworkWrapper ![GitHub release](https://img.shields.io/github/release/ajeetx/entityframeworkwrapper.svg?style=for-the-badge)
+
 
 > [![Build Status](https://travis-ci.org/AJEETX/EntityFrameworkWrapper.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/EntityFrameworkWrapper)
 
@@ -64,5 +65,3 @@ Having any trouble? Check out our [documentation](https://github.com/AJEETX/Enti
 >[![Downloads](https://img.shields.io/badge/downloads-327-blue.svg?style=plastic)](https://www.nuget.org/stats/packages/Generic.Repository.EntityFramework?groupby=Version)
 
 > [![HitCount](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1.svg)](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1)
-
-> ![Github All Releases](https://img.shields.io/github/downloads/ajeetx/entityframeworkwrapper/total.svg)
