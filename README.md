@@ -1,9 +1,9 @@
 # EntityFrameworkWrapper ![GitHub release](https://img.shields.io/github/release/ajeetx/entityframeworkwrapper.svg?style=for-the-badge)
 
 	
-| Version | Build | .Net  | Dependency |
+| Release | Build | .Net  | Dependency |
 | ---     | ---   | ---    | ---        |
-| ![GitHub release](https://img.shields.io/github/release/ajeetx/entityframeworkwrapper.svg?style=for-the-badge) | [![Build Status](https://travis-ci.org/AJEETX/EntityFrameworkWrapper.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/EntityFrameworkWrapper) | [![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981) | [![dependencies Status](https://img.shields.io/badge/dependency-none-brightgreen.svg?style=plastic)](https://img.shields.io/badge/dependency-none-brightgreen.svg) |
+|[![Wrapper](https://img.shields.io/badge/EntityFramework-Wrapper-blue.svg)](https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7) | [![Build Status](https://travis-ci.org/AJEETX/EntityFrameworkWrapper.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/EntityFrameworkWrapper) | [![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981) | [![dependencies Status](https://img.shields.io/badge/dependency-none-brightgreen.svg?style=plastic)](https://img.shields.io/badge/dependency-none-brightgreen.svg) |
 
 ### Steps to connect .net application with Sql server database:
 
