@@ -14,44 +14,30 @@ namespace EntityFrameworkWrapper.Tests
     [TestClass]
     public class RepositoryTest
     {
-        private Mock<IDbContext> _IMockCtx;
-
-        private IEnumerable<InputModel> model;
+        private Mock<IDbContext> _IMockCtx; private IEnumerable<InputModel> model;
         [TestInitialize]
         public void Init()
         {
-            _IMockCtx = new Mock<IDbContext>();
-            model = new List<InputModel>{ new InputModel {
-                Name = "Test Name",
-                Id = 999}
-                };
+            model = new List<InputModel>{ new InputModel { Name = "Test Name", Id = 999} };
             SetRepository(model);
+        }
+        [TestCleanup]
+        public void CleanUp()
+        {
+            _IMockCtx = null;model = null;
         }
         private void SetRepository<T>(IEnumerable<T> data) where T : class
         {
-            var dbset = GetIDbset(data);
-            _IMockCtx.Setup(m => m.Set<T>()).Returns(dbset);
+            var dbSet = new Mock<IDbSet<T>>();
+            _IMockCtx = new Mock<IDbContext>();
+            _IMockCtx.Setup(m => m.Set<T>()).Returns(dbSet.Object);
             _IMockCtx.Setup(m => m.Set<T>().Add(It.IsAny<T>())).Verifiable();
             _IMockCtx.Setup(m => m.Set<T>().Remove(It.IsAny<T>())).Verifiable();
             _IMockCtx.Setup(m => m.Save()).Returns(1);
         }
 
-        private static IDbSet<T> GetIDbset<T>(IEnumerable<T> sourceList) where T : class
-        {
-            var queryable = sourceList.AsQueryable();
-
-            var dbSet = new Mock<IDbSet<T>>();
-            dbSet.As<IQueryable<T>>().Setup(m => m.Provider).Returns(queryable.Provider);
-            dbSet.As<IQueryable<T>>().Setup(m => m.Expression).Returns(queryable.Expression);
-            dbSet.As<IQueryable<T>>().Setup(m => m.ElementType).Returns(queryable.ElementType);
-            dbSet.As<IQueryable<T>>().Setup(m => m.GetEnumerator()).Returns(() => queryable.GetEnumerator());
-            dbSet.Setup(m => m.Add(It.IsAny<T>())).Callback<T>((s) => sourceList.ToList().Add(s)).Returns(() => { return sourceList.Last(); });
-            dbSet.Setup(m => m.Attach(It.IsAny<T>())).Callback<T>((s) => sourceList.ToList().Add(s)).Returns(() => { return sourceList.Last(); });
-            dbSet.Setup(m => m.Remove(It.IsAny<T>())).Callback<T>((s) => sourceList.ToList().Remove(s)).Returns(() => { return sourceList.Last(); });
-            return dbSet.Object;
-        }
         [TestMethod]
-        public void Get_client_data_from_datastore()
+        public void Get_data_from_datastore_returns_collection_of_result()
         {
             //Arrange
             var repository = new Repository<InputModel>(_IMockCtx.Object);
@@ -65,7 +51,7 @@ namespace EntityFrameworkWrapper.Tests
         }
 
         [TestMethod]
-        public void Add_client_data_to_datastore_successful()
+        public void Add_data_to_datastore_successful()
         {
             //Arrange
             var repository = new Repository<InputModel>(_IMockCtx.Object);
@@ -75,10 +61,11 @@ namespace EntityFrameworkWrapper.Tests
 
             //Assert
             _IMockCtx.Verify(v => v.Set<InputModel>().Add(It.IsAny<InputModel>()), Times.Once);
+            _IMockCtx.Verify(v => v.Save(), Times.Once);
         }
 
         [TestMethod]
-        public void Delete_client_data_from_datastore_successful()
+        public void Delete_data_from_datastore_successful()
         {
             //Arrange
             var repository = new Repository<InputModel>(_IMockCtx.Object);
@@ -87,6 +74,7 @@ namespace EntityFrameworkWrapper.Tests
             repository.Delete(new InputModel { });
 
             //Assert
+            _IMockCtx.Verify(v => v.Save(), Times.Once);
             _IMockCtx.Verify(v => v.Set<InputModel>().Remove(It.IsAny<InputModel>()), Times.Once);
         }
     }
