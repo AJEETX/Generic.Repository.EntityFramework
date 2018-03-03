@@ -69,5 +69,5 @@ Having trouble with Pages? Check out our [documentation](https://github.com/AJEE
 
 >[![Downloads](https://img.shields.io/badge/downloads-1K-blue.svg?style=plastic)](https://www.nuget.org/stats/packages/Generic.Repository.EntityFramework?groupby=Version)
 
-> [![HitCount](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1.svg?style=plastic)](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1)
+> [![HitCount](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1.svg)](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1)
 
