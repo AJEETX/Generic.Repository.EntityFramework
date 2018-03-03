@@ -4,7 +4,7 @@
 
 > [![Build Status](https://travis-ci.org/AJEETX/EntityFrameworkWrapper.png?branch=master)](https://travis-ci.org/AJEETX/EntityFrameworkWrapper)
 
-> [![dependencies Status](https://david-dm.org/dwyl/esta/status.svg)](https://david-dm.org/dwyl/esta)
+> [![dependencies Status](https://img.shields.io/badge/dependency-none-brightgreen.svg)](https://img.shields.io/badge/dependency-none-brightgreen.svg)
 
 ### Support or Contact
 
