@@ -9,7 +9,7 @@
 ### Steps to connect .net application with Sql server database:
 >   Through Visual Studio IDE, 
 >	1.  Download the latest nuget package of 'EntityFrameworkWrapper' from 
-[![NuGet](https://img.shields.io/nuget/v/Nuget.Core.svg)]
+![NuGet](https://img.shields.io/nuget/v/Nuget.Core.svg)
 (https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7)
 >	2. Create your EntityFramework DataModel, then tweak the DataModel as below
 ```
