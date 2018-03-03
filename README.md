@@ -1,6 +1,6 @@
 # EntityFrameworkWrapper [![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981)
 
-> [![Release](https://img.shields.io/badge/release-v1.0.7-blue.svg?style=plastic)](https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7)
+> [![Release](https://img.shields.io/badge/release-v1.0.7-blue.svg?style=for-the-badge)](https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7)
 
 > [![Build Status](https://travis-ci.org/AJEETX/EntityFrameworkWrapper.png?branch=master&style=plastic)](https://travis-ci.org/AJEETX/EntityFrameworkWrapper)
 
@@ -8,7 +8,7 @@
 
 ### Steps to connect .net application with Sql server database:
 >   Through Visual Studio IDE, 
->	1.  Download the latest nuget package of 'EntityFrameworkWrapper' from [![Nuget](https://img.shields.io/badge/release-v1.0.7-blue.svg?style=for-the-badge)](https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7)
+>	1.  Download the latest nuget package of 'EntityFrameworkWrapper' from [![Nuget](https://img.shields.io/badge/release-v1.0.7-blue.svg?style=flat)](https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7)
 >	2. Create your EntityFramework DataModel, then tweak the DataModel as below
 ```
 using EntityFrameworkWrapper;       //add this reference
