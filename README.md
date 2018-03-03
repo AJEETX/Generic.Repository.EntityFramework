@@ -1,14 +1,14 @@
-# EntityFrameworkWrapper [![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981)
-
-> [![Release](https://img.shields.io/badge/release-v1.0.7-blue.svg?style=for-the-badge)](https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7)
+# EntityFrameworkWrapper [![Release](https://img.shields.io/badge/release-v1.0.7-blue.svg?style=for-the-badge)](https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7)
 
 > [![Build Status](https://travis-ci.org/AJEETX/EntityFrameworkWrapper.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/EntityFrameworkWrapper)
 
+> [![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981)
 > [![dependencies Status](https://img.shields.io/badge/dependency-none-brightgreen.svg?style=plastic)](https://img.shields.io/badge/dependency-none-brightgreen.svg)
 
 ### Steps to connect .net application with Sql server database:
 
->    (https://img.shields.io/badge/EntityFramework-Wrapper-blue.svg)] (https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7) Download the latest nuget package through Visual Studio IDE, 
+ 
+ > [![Wrapper](https://img.shields.io/badge/EntityFramework-Wrapper-blue.svg)](https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7)  
 
 >   2. Create your EntityFramework DataModel, then tweak the DataModel as below
 ```
