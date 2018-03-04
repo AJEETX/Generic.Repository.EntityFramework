@@ -1,4 +1,4 @@
-# EntityFrameworkWrapper ![GitHub release](https://img.shields.io/github/release/ajeetx/entityframeworkwrapper.svg?style=for-the-badge)
+# EntityFrameworkWrapper ![NuGet](https://img.shields.io/nuget/v/Generic.Repository.EntityFramework.svg)
 
 	
 | Release | Build | .Net  | Dependency |
