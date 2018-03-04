@@ -60,6 +60,6 @@ public class ConsumeService
 
 Having any trouble? Check out our [documentation](https://github.com/AJEETX/EntityFrameworkWrapper/blob/master/README.md) or [contact support](mailto:ajeetkumar@email.com) and we’ll help you sort it out.
 
->[![Downloads](https://img.shields.io/badge/downloads-327-blue.svg?style=plastic)](https://www.nuget.org/stats/packages/Generic.Repository.EntityFramework?groupby=Version)
+>[![Downloads](https://img.shields.io/nuget/dt/Generic.Repository.EntityFramework.svg?style=plastic)](https://www.nuget.org/stats/packages/Generic.Repository.EntityFramework?groupby=Version)
 
 > [![HitCount](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1.svg)](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1)
