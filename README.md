@@ -1,9 +1,10 @@
 # EntityFrameworkWrapper ![GitHub release](https://img.shields.io/github/release/ajeetx/EntityFrameworkWrapper.svg?style=for-the-badge)
 
 	
-| Release | Build | .Net  | Dependency |
-| ---     | ---   | ---    | ---        |
-|[![Wrapper](https://img.shields.io/badge/EntityFrameworkWrapper-stable-brightgreen.svg)](https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7) | [![Build Status](https://travis-ci.org/AJEETX/EntityFrameworkWrapper.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/EntityFrameworkWrapper) | [![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981) | [![dependencies Status](https://img.shields.io/badge/dependency-none-brightgreen.svg?style=plastic)](https://img.shields.io/badge/dependency-none-brightgreen.svg) |
+| Release | Build | .Net Version | Dependency | Language | Repo Size | Nuget |
+| ---     | ---   | ---    | ---        | --- | --- | --- | 
+|[![Wrapper](https://img.shields.io/badge/EntityFrameworkWrapper-stable-brightgreen.svg)](https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7) | [![Build Status](https://travis-ci.org/AJEETX/EntityFrameworkWrapper.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/EntityFrameworkWrapper) | [![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981) | [![dependencies Status](https://img.shields.io/badge/dependency-none-brightgreen.svg?style=plastic)](https://img.shields.io/badge/dependency-none-brightgreen.svg) | ![GitHub top language](https://img.shields.io/github/languages/top/ajeetx/EntityFrameworkWrapper.svg) |![GitHub repo size in bytes](https://img.shields.io/github/repo-size/ajeetx/EntityFrameworkWrapper.svg) | [![Downloads](https://img.shields.io/nuget/dt/Generic.Repository.EntityFramework.svg?style=plastic)](https://www.nuget.org/stats/packages/Generic.Repository.EntityFramework?groupby=Version)
+
 
 # Purpose!!! 
 ```
@@ -64,7 +65,5 @@ public class ConsumeService
 ### Support or Contact
 
 Having any trouble? Check out our [documentation](https://github.com/AJEETX/EntityFrameworkWrapper/blob/master/README.md) or [contact support](mailto:ajeetkumar@email.com) and we’ll help you sort it out.
-
->[![Downloads](https://img.shields.io/nuget/dt/Generic.Repository.EntityFramework.svg?style=plastic)](https://www.nuget.org/stats/packages/Generic.Repository.EntityFramework?groupby=Version)
 
 > [![HitCount](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1.svg)](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1)
