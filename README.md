@@ -1,10 +1,15 @@
 # EntityFrameworkWrapper ![GitHub release](https://img.shields.io/github/release/ajeetx/EntityFrameworkWrapper.svg?style=for-the-badge)
 
 	
-| Release | Build | .Net Version | Dependency |
+| Release | Build | .Net  | Dependency |
 | ---     | ---   | ---    | ---        |
 |[![Wrapper](https://img.shields.io/badge/EntityFrameworkWrapper-stable-brightgreen.svg)](https://www.nuget.org/packages/Generic.Repository.EntityFramework/1.0.7) | [![Build Status](https://travis-ci.org/AJEETX/EntityFrameworkWrapper.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/EntityFrameworkWrapper) | [![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981) | [![dependencies Status](https://img.shields.io/badge/dependency-none-brightgreen.svg?style=plastic)](https://img.shields.io/badge/dependency-none-brightgreen.svg) |
 
+# Purpose!!! 
+```
+The ease of use of database CRUD operation through the wrapper
+```
+###### note: The nuget package is a wrapper around ORM e.g. EntityFramework
 ### Steps to connect .net application with Sql server database:
 
  
