@@ -62,7 +62,6 @@ public class ConsumeService
      }
 ```
 
-| Pre-release | Last Release |  Nuget   | Myget  | Counter   | Contributor | Disclaimer |
 | ---         | ---                        | ---      | ---    |  ---      | ---         | --- |
 |![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/ajeetx/Carz.svg?label=pre-release) | ![Github commits (since latest release)](https://img.shields.io/github/commits-since/ajeetx/carz/latest.svg)| [![Downloads](https://img.shields.io/nuget/dt/Generic.Repository.EntityFramework.svg?label=nuget-download&style=plastic)](https://www.nuget.org/stats/packages/Generic.Repository.EntityFramework?groupby=Version) | ![MyGet](https://img.shields.io/myget/azy/dt/Generic.Repository.EntityFramework.svg?style=plastic&label=myget-download) | [![HitCount](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1.svg)](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1) | ![GitHub contributors](https://img.shields.io/github/contributors/ajeetx/EntityFrameworkWrapper.svg?style=plastic)|![license](https://img.shields.io/github/license/ajeetx/EntityFrameworkWrapper.svg?style=plastic)
 
@@ -71,7 +70,7 @@ public class ConsumeService
 Having any trouble? Check out our [documentation](https://github.com/AJEETX/EntityFrameworkWrapper/blob/master/README.md) or [contact support](mailto:ajeetkumar@email.com) and we’ll help you sort it out.
 
 
+
 ![GitHub forks](https://img.shields.io/github/forks/ajeetx/entityframeworkwrapper.svg?style=social&logo=github&label=Fork)
 ![GitHub stars](https://img.shields.io/github/stars/ajeetx/entityframeworkwrapper.svg?style=social&logo=github&label=Stars) 
  ![GitHub watchers](https://img.shields.io/github/watchers/ajeetx/carz.svg?style=social&logo=github&label=Watch)
-
