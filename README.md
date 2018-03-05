@@ -1,9 +1,9 @@
 # EntityFrameworkWrapper ![GitHub release](https://img.shields.io/github/release/ajeetx/EntityFrameworkWrapper.svg?style=for-the-badge)
 
 	
-| Release | Build | .Net Version | Dependency | Language | Repo Size  |
+| Release | Build | .Net Version | Languages | Language | Repo Size  |
 | ---     | ---   | ---          | ---        | ---      | ---        | 
-|![GitHub Release Date](https://img.shields.io/github/release-date/ajeetx/EntityFrameworkWrapper.svg?style=plastic)|[![Build Status](https://travis-ci.org/AJEETX/EntityFrameworkWrapper.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/EntityFrameworkWrapper) | [![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981) | [![dependencies Status](https://img.shields.io/badge/dependency-none-brightgreen.svg?style=plastic)](https://img.shields.io/badge/dependency-none-brightgreen.svg) | ![GitHub top language](https://img.shields.io/github/languages/top/ajeetx/EntityFrameworkWrapper.svg) |![GitHub repo size in bytes](https://img.shields.io/github/repo-size/ajeetx/EntityFrameworkWrapper.svg) 
+|![GitHub Release Date](https://img.shields.io/github/release-date/ajeetx/EntityFrameworkWrapper.svg?style=plastic)|[![Build Status](https://travis-ci.org/AJEETX/EntityFrameworkWrapper.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/EntityFrameworkWrapper) | [![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981) | ![GitHub language count](https://img.shields.io/github/languages/count/ajeetx/EntityFrameworkWrapper.svg?style=plastic)| ![GitHub top language](https://img.shields.io/github/languages/top/ajeetx/EntityFrameworkWrapper.svg) |![GitHub repo size in bytes](https://img.shields.io/github/repo-size/ajeetx/EntityFrameworkWrapper.svg) 
 
 
 # Purpose!!! 
@@ -69,3 +69,9 @@ public class ConsumeService
 ### Support or Contact
 
 Having any trouble? Check out our [documentation](https://github.com/AJEETX/EntityFrameworkWrapper/blob/master/README.md) or [contact support](mailto:ajeetkumar@email.com) and we’ll help you sort it out.
+
+
+![GitHub forks](https://img.shields.io/github/forks/ajeetx/entityframeworkwrapper.svg?style=social&logo=github&label=Fork)
+![GitHub stars](https://img.shields.io/github/stars/ajeetx/entityframeworkwrapper.svg?style=social&logo=github&label=Stars) 
+ ![GitHub watchers](https://img.shields.io/github/watchers/ajeetx/carz.svg?style=social&logo=github&label=Watch)
+
