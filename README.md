@@ -12,17 +12,20 @@ In order to perform database CRUD operation from .net application,
 the wrapper makes it quite easy by following the below steps.
 ```
 ###### note: The nuget package is a wrapper around ORM e.g. EntityFramework
-### Steps to connect .net application with Sql server database:
+#### Steps to connect .net application with Sql server database:
 
  
- >  1. Download ![NuGet](https://img.shields.io/nuget/v/Generic.Repository.EntityFramework.svg)  through VS IDE  to install in your project.
-
+ > Create your .net project choosing **.net4.6.1** version in VS2015 or above.
+ >  1. Search nuget package with name **'Generic.Repository.EntityFramework'**.
+ >  2. Download the ![NuGet](https://img.shields.io/nuget/v/Generic.Repository.EntityFramework.svg)  through VS IDE  to install in your project.
 >   2. Create your EntityFramework DataModel, then tweak the DataModel as below
+
+IDbContext type is inherited from the installed  ![NuGet](https://img.shields.io/nuget/v/Generic.Repository.EntityFramework.svg) package
 ```
 using EntityFrameworkWrapper;       //add this reference
-
-public partial class DB : DbContext, IDbContext   //DB is real data model created from database
-    { //IDbContext is inherited from this nuget package
+//DB is real data model created from database
+public partial class DB : DbContext, IDbContext   
+    { 
         public DB() : base("name=connectionstring"){} 
         IDbSet<T> IDbContext.Set<T>()
         {
@@ -33,7 +36,6 @@ public partial class DB : DbContext, IDbContext   //DB is real data model create
             return base.SaveChanges();
         }
         ....
-        ...
     }
 ```
 >   3.	Now all set, please add the below lines from your consuming object/component
@@ -44,22 +46,29 @@ public class ConsumeService
 {
      ...
     void ConsumeMethod()
-     {
-     var unitycontainer = UnityConfig.UnityContainer;//get the Unity container
-     unitycontainer.RegisterType<IDbContext, DataModel>(); // register you 'DataModel'
-     var dbManager=unitycontainer.Resolve<IDBManager>(); //get the db manager
-	//DO YOUR CRUD OPERATION //Customer is the table name in DB; 
-       //GET	
-        var result=dbManager.GetRepository<Customer>().Get();  
+    {
+           //get the Unity container
+           var unitycontainer = UnityConfig.UnityContainer;
+     
+           // register your 'DataModel'
+           unitycontainer.RegisterType<IDbContext, DataModel>(); 
+     
+           var dbManager=unitycontainer.Resolve<IDBManager>(); //get the db manager
+     
+	      //All wired up !!!
+          DO YOUR CRUD OPERATION  & Customer is the table name in DB; 
+         
+         //GET	
+         var result=dbManager.GetRepository<Customer>().Get();  
        
-       //FIND by id, where id is the primary key
-	var result=dbManager.GetRepository<Customer>().Find(id); 
+         //FIND by id, where id is the primary key
+	     var result=dbManager.GetRepository<Customer>().Find(id); 
 
-       // ADD, custObj is the Customer object
-	var result=dbManager.GetRepository<Customer>().Add(custObj);
+         // ADD, custObj is the Customer object
+	     var result=dbManager.GetRepository<Customer>().Add(custObj);
 
-       // DELETE, custObj is the Customer object
-	var result=dbManager.GetRepository<Customer>().Delete(custObj);
+         // DELETE, custObj is the Customer object
+	     var result=dbManager.GetRepository<Customer>().Delete(custObj);
      }
 ```
 
@@ -67,10 +76,8 @@ public class ConsumeService
 
 Having any trouble? Check out our [documentation](https://github.com/AJEETX/EntityFrameworkWrapper/blob/master/README.md) or [contact support](mailto:ajeetkumar@email.com) and we’ll help you sort it out.
 
-|![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/ajeetx/Carz.svg?label=pre-release) | ![Github commits (since latest release)](https://img.shields.io/github/commits-since/ajeetx/carz/latest.svg)| [![Downloads](https://img.shields.io/nuget/dt/Generic.Repository.EntityFramework.svg?label=nuget-download&style=plastic)](https://www.nuget.org/stats/packages/Generic.Repository.EntityFramework?groupby=Version) | ![MyGet](https://img.shields.io/myget/azy/dt/Generic.Repository.EntityFramework.svg?style=plastic&label=myget-download) | [![HitCount](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1.svg)](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1) | ![GitHub contributors](https://img.shields.io/github/contributors/ajeetx/EntityFrameworkWrapper.svg?style=plastic)|![license](https://img.shields.io/github/license/ajeetx/EntityFrameworkWrapper.svg?style=plastic)
-| ---  | ---  | ---  | ---    |  ---   | --- | --- |
+|![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/ajeetx/Carz.svg?label=pre-release) | ![Github commits (since latest release)](https://img.shields.io/github/commits-since/ajeetx/carz/latest.svg)| [![Downloads](https://img.shields.io/nuget/dt/Generic.Repository.EntityFramework.svg?label=nuget-download&style=plastic)](https://www.nuget.org/stats/packages/Generic.Repository.EntityFramework?groupby=Version) | ![MyGet](https://img.shields.io/myget/azy/dt/Generic.Repository.EntityFramework.svg?style=plastic&label=myget-download) |
+| ---  | ---  | ---  | ---    |  
 
-![GitHub forks](https://img.shields.io/github/forks/ajeetx/entityframeworkwrapper.svg?style=social&logo=github&label=Fork)
-![GitHub stars](https://img.shields.io/github/stars/ajeetx/entityframeworkwrapper.svg?style=social&logo=github&label=Stars) 
- ![GitHub watchers](https://img.shields.io/github/watchers/ajeetx/carz.svg?style=social&logo=github&label=Watch)
-
+ [![HitCount](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1.svg)](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1) | ![GitHub contributors](https://img.shields.io/github/contributors/ajeetx/EntityFrameworkWrapper.svg?style=plastic)|![license](https://img.shields.io/github/license/ajeetx/EntityFrameworkWrapper.svg?style=plastic)|
+ | --- | --- | ---|
