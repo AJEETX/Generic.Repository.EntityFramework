@@ -76,8 +76,8 @@ public class ConsumeService
 
 Having any trouble? Check out our [documentation](https://github.com/AJEETX/EntityFrameworkWrapper/blob/master/README.md) or [contact support](mailto:ajeetkumar@email.com) and we’ll help you sort it out.
 
-|![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/ajeetx/Carz.svg?label=pre-release) | ![Github commits (since latest release)](https://img.shields.io/github/commits-since/ajeetx/carz/latest.svg)| [![Downloads](https://img.shields.io/nuget/dt/Generic.Repository.EntityFramework.svg?label=nuget-download&style=plastic)](https://www.nuget.org/stats/packages/Generic.Repository.EntityFramework?groupby=Version) | ![MyGet](https://img.shields.io/myget/azy/dt/Generic.Repository.EntityFramework.svg?style=plastic&label=myget-download) |
-| ---  | ---  | ---  | ---    |  
+|![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/ajeetx/Carz.svg?label=pre-release) | ![Github commits (since latest release)](https://img.shields.io/github/commits-since/ajeetx/carz/latest.svg)| [![Downloads](https://img.shields.io/nuget/dt/Generic.Repository.EntityFramework.svg?label=nuget-download&style=flat-square)](https://www.nuget.org/stats/packages/Generic.Repository.EntityFramework?groupby=Version) | [![Downloads](https://img.shields.io/myget/azy/dt/Generic.Repository.EntityFramework.svg?style=flat-square&label=myget-download)](https://www.myget.org/feed/azy/package/nuget/Generic.Repository.EntityFramework)|
+| ---  | ---  | ---  | ---    |
 
  [![HitCount](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1.svg)](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1) | ![GitHub contributors](https://img.shields.io/github/contributors/ajeetx/EntityFrameworkWrapper.svg?style=plastic)|![license](https://img.shields.io/github/license/ajeetx/EntityFrameworkWrapper.svg?style=plastic)|
  | --- | --- | ---|
