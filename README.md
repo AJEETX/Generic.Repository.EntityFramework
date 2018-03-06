@@ -1,8 +1,9 @@
-# EntityFrameworkWrapper ![GitHub release](https://img.shields.io/github/release/ajeetx/EntityFrameworkWrapper.svg?style=for-the-badge) ![GitHub Release Date](https://img.shields.io/github/release-date/ajeetx/EntityFrameworkWrapper.svg?style=plastic) 
+# EntityFrameworkWrapper ![GitHub release](https://img.shields.io/github/release/ajeetx/EntityFrameworkWrapper.svg?style=for-the-badge)![Maintenance](https://img.shields.io/maintenance/yes/2018.svg?style=for-the-badge)
+| ![GitHub Release Date](https://img.shields.io/github/release-date/ajeetx/EntityFrameworkWrapper.svg?style=plastic) | ![Website](https://img.shields.io/website-stable-offline-green-red/http/ajeetx.github.io/EntityFrameworkWrapper.svg?label=status&style=plastic)|[![Build Status](https://travis-ci.org/AJEETX/EntityFrameworkWrapper.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/EntityFrameworkWrapper)
+|  --- | ---     | ---   |
 
-
-| ![Website](https://img.shields.io/website-stable-offline-green-red/http/ajeetx.github.io/EntityFrameworkWrapper.svg?label=status&style=plastic)|[![Build Status](https://travis-ci.org/AJEETX/EntityFrameworkWrapper.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/EntityFrameworkWrapper) | [![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981) | ![GitHub language count](https://img.shields.io/github/languages/count/ajeetx/EntityFrameworkWrapper.svg?style=plastic)| ![GitHub top language](https://img.shields.io/github/languages/top/ajeetx/EntityFrameworkWrapper.svg) |![GitHub repo size in bytes](https://img.shields.io/github/repo-size/ajeetx/EntityFrameworkWrapper.svg) 
-| ---     | ---   | ---          | ---        | ---      | ---        | 
+[![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981) | ![GitHub language count](https://img.shields.io/github/languages/count/ajeetx/EntityFrameworkWrapper.svg?style=plastic)| ![GitHub top language](https://img.shields.io/github/languages/top/ajeetx/EntityFrameworkWrapper.svg) |![GitHub repo size in bytes](https://img.shields.io/github/repo-size/ajeetx/EntityFrameworkWrapper.svg) 
+| ---          | ---        | ---      | ---        | 
 
 
 
