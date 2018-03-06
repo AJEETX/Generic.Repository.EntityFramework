@@ -11,11 +11,23 @@
 In order to perform database CRUD operation from .net application, 
 the wrapper makes it quite easy by following the below steps.
 ```
-###### note: The nuget package is a wrapper around ORM e.g. EntityFramework
-#### Steps to connect .net application with Sql server database:
 
- 
- > Create your .net project choosing **.net4.6.1** version in VS2015 or above.
+#### Application list and details
+
+| App Name| Type | Comments|
+| --- | --- | --- |
+| EntityFrameworkWrapper| Class Library | EntityFramework wrapping business logic|
+| EntityFrameworkWrapper.Test| Test App |unit tests |
+| ConsoleApp | Console  |Can be as startup project|
+
+> note: The nuget package **"EntityFrameworkWrapper"** is a wrapper around ORM  EntityFramework
+
+<hr />
+
+#### Steps to use the  ![NuGet](https://img.shields.io/nuget/v/Generic.Repository.EntityFramework.svg) package 
+
+ In VS2015 or above, Create .net application [**.net4.6.1**] to interact with Sql server database
+
  >  1. Search nuget package with name **'Generic.Repository.EntityFramework'**.
  >  2. Download the ![NuGet](https://img.shields.io/nuget/v/Generic.Repository.EntityFramework.svg)  through VS IDE  to install in your project.
 >   2. Create your EntityFramework DataModel, then tweak the DataModel as below
