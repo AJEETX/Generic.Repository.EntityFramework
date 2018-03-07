@@ -25,15 +25,15 @@ the wrapper makes it quite easy by following the below steps.
 
 <hr />
 
-#### Steps to use the  ![NuGet](https://img.shields.io/nuget/v/Generic.Repository.EntityFramework.svg) package 
+#### Steps to use the  [![NuGet](https://img.shields.io/nuget/v/Generic.Repository.EntityFramework.svg)](https://www.nuget.org/packages/Generic.Repository.EntityFramework) package 
 
  In VS2015 or above, Create .net application [**.net4.6.1**] to interact with Sql server database
 
  >  1. Search nuget package with name **'Generic.Repository.EntityFramework'**.
- >  2. Download the ![NuGet](https://img.shields.io/nuget/v/Generic.Repository.EntityFramework.svg)  through VS IDE  to install in your project.
+ >  2. Download the  [![NuGet](https://img.shields.io/nuget/v/Generic.Repository.EntityFramework.svg)](https://www.nuget.org/packages/Generic.Repository.EntityFramework)  through VS IDE  to install in your project.
 >   2. Create your EntityFramework DataModel, then tweak the DataModel as below
 
-IDbContext type is inherited from the installed  ![NuGet](https://img.shields.io/nuget/v/Generic.Repository.EntityFramework.svg) package
+IDbContext type is inherited from the installed   [![NuGet](https://img.shields.io/nuget/v/Generic.Repository.EntityFramework.svg)](https://www.nuget.org/packages/Generic.Repository.EntityFramework) package
 ```
 using EntityFrameworkWrapper;       //add this reference
 //DB is real data model created from database
