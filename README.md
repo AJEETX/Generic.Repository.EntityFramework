@@ -61,12 +61,12 @@ public class ConsumeService
     void ConsumeMethod()
     {
            //get the Unity container
-           var unitycontainer = UnityConfig.UnityContainer;
+           var container = UnityConfig.Container;
      
            // register your 'DataModel'
-           unitycontainer.RegisterType<IDbContext, DataModel>(); 
+           container.RegisterType<IDbContext, DataModel>(); 
      
-           var dbManager=unitycontainer.Resolve<IDBManager>(); //get the db manager
+           var dbManager=container.Resolve<IDBManager>(); //get the db manager
      
 	      //All wired up !!!
           DO YOUR CRUD OPERATION  & Customer is the table name in DB; 
