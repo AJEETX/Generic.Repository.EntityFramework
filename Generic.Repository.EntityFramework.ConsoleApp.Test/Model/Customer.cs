@@ -1,4 +1,4 @@
-namespace ConsoleApp.Service
+namespace Generic.Repository.EntityFramework.ConsoleApp.Test.Model
 {
     using System;
     using System.Collections.Generic;

@@ -2,14 +2,14 @@
 
 namespace Generic.Repository.EntityFramework
 {
-    public class UnityConfig
+    public static class UnityConfig
     {
-        public static IUnityContainer UnityContainer;
+        public static IUnityContainer Container;
         static UnityConfig()
         {
-            UnityContainer = new UnityContainer();
-            UnityContainer.RegisterType<IDBManager, DBManager>();
-            UnityContainer.RegisterType(typeof(IRepository<>), typeof(Repository<>));
+            Container = new UnityContainer();
+            Container.RegisterType<IDBManager, DBManager>();
+            Container.RegisterType(typeof(IRepository<>), typeof(Repository<>));
         }
     }
 }

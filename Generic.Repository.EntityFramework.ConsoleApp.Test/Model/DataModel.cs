@@ -1,18 +1,14 @@
-namespace ConsoleApp.Service
+using Generic.Repository.EntityFramework;
+namespace Generic.Repository.EntityFramework.ConsoleApp.Test.Model
 {
     using System;
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
-    using EntityFrameworkWrapper;
 
-    public partial class dbModel : DbContext,IDbContext
+    public partial class DataModel : DbContext, IDbContext
     {
-        public dbModel()
-            : base("name=dbModelz")
-        {
-        }
-
+        public DataModel() : base("name=DataModel") { }
         public virtual DbSet<Customer> Customers { get; set; }
 
         public int Save()

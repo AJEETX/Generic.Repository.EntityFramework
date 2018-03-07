@@ -1,18 +1,17 @@
 ﻿using System;
-using ConsoleApp.Service;
-using EntityFrameworkWrapper;
+using Generic.Repository.EntityFramework;
+using Generic.Repository.EntityFramework.ConsoleApp.Test.Model;
 using Unity;
-
 namespace ConsoleApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var unitycontainer = UnityConfig.UnityContainer;
-            unitycontainer.RegisterType<IDbContext, dbModel>();
-            var dbMgr = unitycontainer.Resolve<IDBManager>();
-            var result=dbMgr.GetRepository<Customer>().Get();
+            var container = UnityConfig.Container;
+            container.RegisterType<IDbContext, DataModel>();
+            var dbMgr = container.Resolve<IDBManager>();
+            var result = dbMgr.GetRepository<Customer>().Get();
             foreach (var item in result)
             {
                 Console.WriteLine($"Name : {item.Name} Age : {item.Age}");
