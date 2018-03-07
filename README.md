@@ -1,4 +1,4 @@
-# EntityFrameworkWrapper ![GitHub release](https://img.shields.io/github/release/ajeetx/EntityFrameworkWrapper.svg?style=for-the-badge) ![Maintenance](https://img.shields.io/maintenance/yes/2018.svg?style=for-the-badge)
+# Generic.Repository.EntityFramework ![GitHub release](https://img.shields.io/github/release/ajeetx/EntityFrameworkWrapper.svg?style=for-the-badge) ![Maintenance](https://img.shields.io/maintenance/yes/2018.svg?style=for-the-badge)
 | ![GitHub Release Date](https://img.shields.io/github/release-date/ajeetx/EntityFrameworkWrapper.svg?style=plastic) | ![Website](https://img.shields.io/website-stable-offline-green-red/http/ajeetx.github.io/EntityFrameworkWrapper.svg?label=status&style=plastic)| [![azy MyGet Build Status](https://www.myget.org/BuildSource/Badge/azy?identifier=2b65bd31-4a27-42f8-9d25-2615bbaaedae)](https://www.myget.org/)|[![Build Status](https://travis-ci.org/AJEETX/EntityFrameworkWrapper.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/EntityFrameworkWrapper) 
 |  --- | ---     | ---   | --- |
 
@@ -21,7 +21,7 @@ the wrapper makes it quite easy by following the below steps.
 | EntityFrameworkWrapper.Test| Test App |unit tests |
 | ConsoleApp | Console  |Can be as startup project|
 
-> note: The nuget package **"EntityFrameworkWrapper"** is a wrapper around ORM  EntityFramework
+> nuget package **"Generic.Repository.EntityFramework"** is a wrapper around ORM  EntityFramework
 
 <hr />
 
