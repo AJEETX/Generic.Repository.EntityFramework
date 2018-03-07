@@ -1,7 +1,4 @@
-﻿using System;
-using System.Data.Entity;
-using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
 namespace Generic.Repository.EntityFramework.Test
