@@ -1,8 +1,8 @@
-# Generic.Repository.EntityFramework ![GitHub release](https://img.shields.io/github/release/ajeetx/EntityFrameworkWrapper.svg?style=for-the-badge) ![Maintenance](https://img.shields.io/maintenance/yes/2018.svg?style=for-the-badge)
-| ![GitHub Release Date](https://img.shields.io/github/release-date/ajeetx/EntityFrameworkWrapper.svg?style=plastic) | ![Website](https://img.shields.io/website-stable-offline-green-red/http/ajeetx.github.io/Generic.Repository.EntityFramework.svg?label=status&style=plastic)| [![azy MyGet Build Status](https://www.myget.org/BuildSource/Badge/azy?identifier=2b65bd31-4a27-42f8-9d25-2615bbaaedae)](https://www.myget.org/)|[![Build Status](https://travis-ci.org/AJEETX/Generic.Repository.EntityFramework.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/EntityFrameworkWrapper) 
+# Generic.Repository.EntityFramework ![GitHub release](https://img.shields.io/github/release/ajeetx/Generic.Repository.EntityFramework.svg?style=for-the-badge) ![Maintenance](https://img.shields.io/maintenance/yes/2018.svg?style=for-the-badge)
+| ![GitHub Release Date](https://img.shields.io/github/release-date/ajeetx/Generic.Repository.EntityFramework.svg?style=plastic) | ![Website](https://img.shields.io/website-stable-offline-green-red/http/ajeetx.github.io/Generic.Repository.EntityFramework.svg?label=status&style=plastic)| [![azy MyGet Build Status](https://www.myget.org/BuildSource/Badge/azy?identifier=2b65bd31-4a27-42f8-9d25-2615bbaaedae)](https://www.myget.org/)|[![Build Status](https://travis-ci.org/AJEETX/Generic.Repository.EntityFramework.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/Generic.Repository.EntityFramework) 
 |  --- | ---     | ---   | --- |
 
-[![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981) | ![GitHub language count](https://img.shields.io/github/languages/count/ajeetx/EntityFrameworkWrapper.svg?style=plastic)| ![GitHub top language](https://img.shields.io/github/languages/top/ajeetx/EntityFrameworkWrapper.svg) |![GitHub repo size in bytes](https://img.shields.io/github/repo-size/ajeetx/EntityFrameworkWrapper.svg) 
+[![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981) | ![GitHub language count](https://img.shields.io/github/languages/count/ajeetx/Generic.Repository.EntityFramework.svg?style=plastic)| ![GitHub top language](https://img.shields.io/github/languages/top/ajeetx/Generic.Repository.EntityFramework.svg) |![GitHub repo size in bytes](https://img.shields.io/github/repo-size/ajeetx/Generic.Repository.EntityFramework.svg) 
 | ---          | ---        | ---      | ---        | 
 
 
@@ -17,9 +17,9 @@ the wrapper makes it quite easy by following the below steps.
 
 | App Name| Type | Comments|
 | --- | --- | --- |
-| EntityFrameworkWrapper| Class Library | EntityFramework wrapping business logic|
-| EntityFrameworkWrapper.Test| Test App |unit tests |
-| ConsoleApp | Console  |Can be as startup project|
+| Generic.Repository.EntityFramework| Class Library | EntityFramework wrapping business logic|
+| Generic.Repository.EntityFramework.Test| Test App |unit tests |
+| Generic.Repository.EntityFramework.ConsoleApp.Test | Console app  |Test the wrapper project|
 
 > nuget package **"Generic.Repository.EntityFramework"** is a wrapper around ORM  EntityFramework
 
@@ -35,7 +35,7 @@ the wrapper makes it quite easy by following the below steps.
 
 IDbContext type is inherited from the installed   [![NuGet](https://img.shields.io/nuget/v/Generic.Repository.EntityFramework.svg)](https://www.nuget.org/packages/Generic.Repository.EntityFramework) package
 ```
-using EntityFrameworkWrapper;       //add this reference
+using Generic.Repository.EntityFramework;       //add this reference
 //DB is real data model created from database
 public partial class DB : DbContext, IDbContext   
     { 
@@ -54,7 +54,7 @@ public partial class DB : DbContext, IDbContext
 >   3.	Now all set, please add the below lines from your consuming object/component
 
 ```
-using EntityFrameworkWrapper;using Unity;  //add these 2 references
+using Generic.Repository.EntityFramework;using Unity;  //add these 2 references
 public class ConsumeService
 {
      ...
@@ -87,10 +87,10 @@ public class ConsumeService
 
 ### Support or Contact
 
-Having any trouble? Check out our [documentation](https://github.com/AJEETX/EntityFrameworkWrapper/blob/master/README.md) or [contact support](mailto:ajeetkumar@email.com) and we’ll help you sort it out.
+Having any trouble? Check out our [documentation](https://github.com/AJEETX/Generic.Repository.EntityFramework/blob/master/README.md) or [contact support](mailto:ajeetkumar@email.com) and we’ll help you sort it out.
 
-|![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/ajeetx/EntityFrameworkWrapper.svg?label=pre-release) | ![Github commits (since latest release)](https://img.shields.io/github/commits-since/ajeetx/EntityFrameworkWrapper/latest.svg)| [![Downloads](https://img.shields.io/nuget/dt/Generic.Repository.EntityFramework.svg?label=nuget-download&style=flat-square)](https://www.nuget.org/stats/packages/Generic.Repository.EntityFramework?groupby=Version) | [![Downloads](https://img.shields.io/myget/azy/dt/Generic.Repository.EntityFramework.svg?style=flat-square&label=myget-download)](https://www.myget.org/feed/azy/package/nuget/Generic.Repository.EntityFramework)|
+|![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/ajeetx/Generic.Repository.EntityFramework.svg?label=pre-release) | ![Github commits (since latest release)](https://img.shields.io/github/commits-since/ajeetx/Generic.Repository.EntityFramework/latest.svg)| [![Downloads](https://img.shields.io/nuget/dt/Generic.Repository.EntityFramework.svg?label=nuget-download&style=flat-square)](https://www.nuget.org/stats/packages/Generic.Repository.EntityFramework?groupby=Version) | [![Downloads](https://img.shields.io/myget/azy/dt/Generic.Repository.EntityFramework.svg?style=flat-square&label=myget-download)](https://www.myget.org/feed/azy/package/nuget/Generic.Repository.EntityFramework)|
 | ---  | ---  | ---  | ---    |
 
- [![HitCount](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1.svg)](http://hits.dwyl.io/ajeetx/EntityFrameworkWrapper/projects/1) | ![GitHub contributors](https://img.shields.io/github/contributors/ajeetx/EntityFrameworkWrapper.svg?style=plastic)|![license](https://img.shields.io/github/license/ajeetx/EntityFrameworkWrapper.svg?style=plastic)|
+ [![HitCount](http://hits.dwyl.io/ajeetx/Generic.Repository.EntityFramework/projects/1.svg)](http://hits.dwyl.io/ajeetx/Generic.Repository.EntityFramework/projects/1) | ![GitHub contributors](https://img.shields.io/github/contributors/ajeetx/Generic.Repository.EntityFramework.svg?style=plastic)|![license](https://img.shields.io/github/license/ajeetx/Generic.Repository.EntityFramework.svg?style=plastic)|
  | --- | --- | ---|
