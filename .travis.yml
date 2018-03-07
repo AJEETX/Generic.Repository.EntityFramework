@@ -1,2 +1,2 @@
 language: csharp
-solution: EntityFrameworkWrapper/Generic.Repository.EntityFramework.sln
+solution: Generic.Repository.EntityFramework.sln
