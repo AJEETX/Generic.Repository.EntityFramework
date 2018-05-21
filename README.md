@@ -64,7 +64,7 @@ public class ConsumeService
            var container = UnityConfig.Container;
      
            // register your 'DataModel'
-           container.RegisterType<IDbContext, DataModel>(); 
+           container.RegisterType<IDbContext, DB>(); 
      
            var dbManager=container.Resolve<IDBManager>(); //get the db manager
      
