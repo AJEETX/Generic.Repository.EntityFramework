@@ -44,7 +44,7 @@ public partial class DB : DbContext, IDbContext
         {
             return base.Set<T>();
         }
-	public DbSet<Table> Tables {get;set;}
+	public DbSet<Customer> Customers {get;set;}
         public int Save()
         {
             return base.SaveChanges();
