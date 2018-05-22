@@ -72,7 +72,19 @@ namespace Generic.Repository.EntityFramework.Tests
             _IMockCtx.Verify(v => v.Set<InputModel>().Add(It.IsAny<InputModel>()), Times.Once);
             _IMockCtx.Verify(v => v.Save(), Times.Once);
         }
+        [TestMethod]
+        public void Update_data_from_datastore_successful()
+        {
+            //Arrange
+            var repository = new Repository<InputModel>(_IMockCtx.Object);
+            var data = model.FirstOrDefault();
+            //Act
+            repository.Update(data);
 
+            //Assert
+            _IMockCtx.Verify(v => v.Set<InputModel>().Attach(It.IsAny<InputModel>()), Times.Once);
+            _IMockCtx.Verify(v => v.Save(), Times.Once);
+        }
         [TestMethod]
         public void Delete_data_from_datastore_successful()
         {
