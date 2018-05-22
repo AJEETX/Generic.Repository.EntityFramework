@@ -44,6 +44,7 @@ public partial class DB : DbContext, IDbContext
         {
             return base.Set<T>();
         }
+	public DbSet<Customer> Customers {get;set;}
         public int Save()
         {
             return base.SaveChanges();
@@ -64,7 +65,7 @@ public class ConsumeService
            var container = UnityConfig.Container;
      
            // register your 'DataModel'
-           container.RegisterType<IDbContext, DataModel>(); 
+           container.RegisterType<IDbContext, DB>(); 
      
            var dbManager=container.Resolve<IDBManager>(); //get the db manager
      
