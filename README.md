@@ -13,17 +13,6 @@ In order to perform database CRUD operation from .net application,
 the wrapper makes it quite easy by following the below steps.
 ```
 
-#### Application list and details
-
-| App Name| Type | Comments|
-| --- | --- | --- |
-| Generic.Repository.EntityFramework| Class Library | EntityFramework wrapping business logic|
-| Generic.Repository.EntityFramework.Test| Test App |unit tests |
-| Generic.Repository.EntityFramework.ConsoleApp.Test | Console   |Test the  wrapping business logic |
-
-> nuget package **"Generic.Repository.EntityFramework"** is a wrapper around ORM  EntityFramework
-
-<hr />
 
 #### Steps to use the  [![NuGet](https://img.shields.io/nuget/v/Generic.Repository.EntityFramework.svg)](https://www.nuget.org/packages/Generic.Repository.EntityFramework) package 
 
@@ -38,53 +27,65 @@ IDbContext type is inherited from the installed   [![NuGet](https://img.shields.
 using Generic.Repository.EntityFramework;       //add this reference
 //DB is real data model created from database
 public partial class DB : DbContext, IDbContext   
-    { 
-        public DB() : base("name=connectionstring"){} 
-        IDbSet<T> IDbContext.Set<T>()
-        {
-            return base.Set<T>();
-        }
-	public DbSet<Customer> Customers {get;set;}
-        public int Save()
-        {
-            return base.SaveChanges();
-        }
-        ....
-    }
+{ 
+  public DB() : base("name=connectionstring"){} 
+  IDbSet<T> IDbContext.Set<T>()
+  {
+  	return base.Set<T>();
+  }
+  public DbSet<Customer> Customers {get;set;}
+  public int Save()
+  {
+  	return base.SaveChanges();
+  }
+  ....
+}
 ```
 >   3.	Now all set, please add the below lines from your consuming object/component
 
 ```
-using Generic.Repository.EntityFramework;using Unity;  //add these 2 references
+//add these 2 references
+using Generic.Repository.EntityFramework;
+using Unity;  
+
 public class ConsumeService
 {
      ...
     void ConsumeMethod()
-    {
-           //get the Unity container
-           var container = UnityConfig.Container;
-     
-           // register your 'DataModel'
-           container.RegisterType<IDbContext, DB>(); 
+    {           
+           var container = UnityConfig.Container; //get the Unity container
+             
+           container.RegisterType<IDbContext, DB>(); // register your 'DataModel'
      
            var dbManager=container.Resolve<IDBManager>(); //get the db manager
      
-	      //All wired up !!!
-          DO YOUR CRUD OPERATION  & Customer is the table name in DB; 
+	      //All wired up. DO YOUR CRUD OPERATION  & Customer is the table name in DB 
          
-         //GET	
-         var result=dbManager.GetRepository<Customer>().Get();  
+         var result=dbManager.GetRepository<Customer>().Get();  //GET	All
        
          //FIND by id, where id is the primary key
 	     var result=dbManager.GetRepository<Customer>().Find(id); 
 
-         // ADD, custObj is the Customer object
-	     var result=dbManager.GetRepository<Customer>().Add(custObj);
+         // custObj is the Customer object
+	     var result=dbManager.GetRepository<Customer>().Add(custObj); //ADD
 
-         // DELETE, custObj is the Customer object
-	     var result=dbManager.GetRepository<Customer>().Delete(custObj);
+	     var result=dbManager.GetRepository<Customer>().Update(custObj); // UPDATE
+
+ 	     var result=dbManager.GetRepository<Customer>().Delete(custObj); // DELETE
      }
 ```
+
+#### Application list and details
+
+| App Name| Type | Comments|
+| --- | --- | --- |
+| Generic.Repository.EntityFramework*| Class Library | EntityFramework wrapping business logic|
+| Generic.Repository.EntityFramework.Test| Test App |unit tests |
+| Generic.Repository.EntityFramework.ConsoleApp.Test | Console   |Test the  wrapping business logic |
+
+> *nuget package **"Generic.Repository.EntityFramework"** is a wrapper around ORM  EntityFramework
+
+<hr />
 
 ### Support or Contact
 
