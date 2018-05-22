@@ -45,6 +45,19 @@ namespace Generic.Repository.EntityFramework.Tests
             Assert.IsInstanceOfType(result, typeof(IEnumerable<InputModel>));
             _IMockCtx.Verify(v => v.Set<InputModel>(), Times.Once);
         }
+        [TestMethod]
+        public void Find_by_id_data_from_datastore_returns_collection_of_result()
+        {
+            //Arrange
+            var repository = new Repository<InputModel>(_IMockCtx.Object);
+
+            //Act
+            var result = repository.Find(1);
+
+            //Assert
+            Assert.IsInstanceOfType(result, typeof(InputModel));
+            _IMockCtx.Verify(v => v.Set<InputModel>(), Times.Once);
+        }
 
         [TestMethod]
         public void Add_data_to_datastore_successful()

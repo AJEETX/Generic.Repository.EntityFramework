@@ -6,6 +6,7 @@ namespace Generic.Repository.EntityFramework
     {
         IEnumerable<T> Get();
         T Find(int id);
+        void Update(T entity);
         void Add(T entity);
         void Delete(T entity);
     }
@@ -31,6 +32,11 @@ namespace Generic.Repository.EntityFramework
         public virtual IEnumerable<T> Get()
         {
             return _context.Set<T>();
+        }
+
+        public void Update(T entity)
+        {
+            _context.Set<T>().Attach(entity);_context.Save();
         }
     }
 }
