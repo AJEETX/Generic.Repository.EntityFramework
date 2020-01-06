@@ -1,4 +1,4 @@
-# Generic.Repository.EntityFramework ![GitHub release](https://img.shields.io/github/release/ajeetx/Generic.Repository.EntityFramework.svg?style=for-the-badge) ![Maintenance](https://img.shields.io/maintenance/yes/2019.svg?style=for-the-badge)
+# Generic.Repository.EntityFramework ![GitHub release](https://img.shields.io/github/release/ajeetx/Generic.Repository.EntityFramework.svg?style=for-the-badge) ![Maintenance](https://img.shields.io/maintenance/yes/2020.svg?style=for-the-badge)
 | ![GitHub Release Date](https://img.shields.io/github/release-date/ajeetx/Generic.Repository.EntityFramework.svg?style=plastic) | ![Website](https://img.shields.io/website-stable-offline-green-red/http/ajeetx.github.io/Generic.Repository.EntityFramework.svg?label=status&style=plastic)| [![azy MyGet Build Status](https://www.myget.org/BuildSource/Badge/azy?identifier=2b65bd31-4a27-42f8-9d25-2615bbaaedae)](https://www.myget.org/)|[![Build Status](https://travis-ci.org/AJEETX/Generic.Repository.EntityFramework.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/Generic.Repository.EntityFramework) 
 |  --- | ---     | ---   | --- |
 
